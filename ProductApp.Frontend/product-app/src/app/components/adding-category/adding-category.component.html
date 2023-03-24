@@ -1,0 +1,35 @@
+<div class="container mx-auto mt-10 mb-5">
+  <div class="max-w-lg mx-auto">
+    <div class="mb-4">
+      <label class="block text-black text-xl mb-2" for="name">
+        Name
+      </label>
+      <input class="shadow appearance-none border-2 rounded-lg w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Category name"
+      [(ngModel)] = "name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-black text-xl mb-2" for="title">
+        Title
+      </label>
+      <input class="shadow appearance-none border-2 rounded-lg w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Category title"
+      [(ngModel)] = "title">
+    </div>
+    <div class="mb-4">
+      <label class="block text-black text-xl mb-2" for="description">
+        Description
+      </label>
+      <textarea class="shadow appearance-none border-2 rounded-lg w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline" id="description" placeholder="Category description"
+       [(ngModel)] = "description"></textarea>
+    </div>
+    <div class="flex items-center space-x-5">
+      <button class="bg-black hover:text-black hover:bg-white border-2 hover:border-black text-white py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="button"
+      (click)="addCategory()">
+        Add Category
+      </button>
+      <button class="bg-black hover:text-black hover:bg-white border-2 hover:border-black text-white py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline" type="button"
+      (click)="cancel()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

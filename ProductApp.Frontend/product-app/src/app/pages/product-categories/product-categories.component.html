@@ -1,0 +1,9 @@
+<div class="px-64 pt-14 mt-5">
+  <app-category [name] = "category.name" [id]="category.id" [description]="category.description" *ngFor="let category of categories"></app-category>
+  <div class="text-xl border-2 rounded-lg w-40 text-center float-right mr-5 mt-5 text-white mb-10 
+    bg-black hover:text-black hover:bg-white hover: border-black cursor-pointer select-none"
+    (click)="addCategory = true">
+    Add category  
+  </div>
+  <adding-category *ngIf="addCategory" (onChanged)="addCategory = false"></adding-category>
+</div>
