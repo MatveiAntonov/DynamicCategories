@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  productapp.webapi:
+    image: ${DOCKER_REGISTRY-}productappwebapi
+    build:
+      context: .
+      dockerfile: ProductApp.WebApi/Dockerfile
+    ports: 
+      - "9001:9001"
+  products-db:
+    image: postgres:latest
+    ports: 
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=products
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=products
